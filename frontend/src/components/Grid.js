@@ -10,7 +10,7 @@ const Table = styled.table`
     padding: 20px;
     box-shadow: 0px 0px 5px #ccc;
     border-radius: 5px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     work-break: break-all;
 `;
@@ -74,7 +74,9 @@ const Grid = ({ clientes, setClientes, setOnEdit }) => {
                     <Tr key={i}>
                         <Td width="30%">{item.nome}</Td>                        
                         <Td width="30%">{item.email}</Td>
-                        <Td width="20%" onlyWeb>{item.fone}</Td>
+                        <Td width="20%" onlyWeb>
+                            {item.fone}
+                        </Td>
                         <Td alignCenter width="5%">
                             <FaEdit onClick={() => handleEdit(item)}/>
                         </Td>

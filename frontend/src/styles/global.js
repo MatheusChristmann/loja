@@ -12,7 +12,7 @@ const Global = createGlobalStyle`
         width: 100vw;
         heigth: 100vh;
         display: flex;
-        justify-content: clearInterval;
+        justify-content: center;
         background-color #f2f2f2;
     }
 `;

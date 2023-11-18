@@ -79,7 +79,7 @@ const Form = ({ getClientes, onEdit, setOnEdit }) => {
             .catch(({ data }) => toast.error(data));            
         } else {
             await axios
-            .put("http://localhost:8800", {
+            .post("http://localhost:8800", {
                 nome: cliente.nome.value,
                 data_nascimento: cliente.data_nascimento.value,                
                 fone: cliente.fone.value,
