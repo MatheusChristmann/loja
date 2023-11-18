@@ -1,9 +1,9 @@
 import { db } from "../db.js";
 
 export const getClientes = (_, res) => {
-    const query = "SELECT * FROM cliente";
+    const q = "SELECT * FROM cliente";
 
-    db.query(query, (err, data) => {
+    db.query(q, (err, data) => {
         if (err) return res.json(err);
 
         return res.status(200).json(data);
@@ -16,7 +16,7 @@ export const addCliente = (req, res) => {
     const values = [
         req.body.nome,
         req.body.data_nascimento,
-        req.body.telefone,
+        req.body.fone,
         req.body.email,
     ];
 
@@ -33,7 +33,7 @@ export const updateCliente = (req, res) => {
     const values = [
         req.body.nome,
         req.body.data_nascimento,
-        req.body.telefone,
+        req.body.fone,
         req.body.email,
     ];
 
