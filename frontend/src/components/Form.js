@@ -39,7 +39,7 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Form = ({ getclientes, onEdit, setOnEdit }) => {
+const Form = ({ getClientes, onEdit, setOnEdit }) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -95,7 +95,7 @@ const Form = ({ getclientes, onEdit, setOnEdit }) => {
     cliente.data_nascimento.value = "";
 
     setOnEdit(null);
-    getclientes();
+    getClientes();
   };
 
   return (
